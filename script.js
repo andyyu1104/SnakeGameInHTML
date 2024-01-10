@@ -128,16 +128,24 @@ function handleKeyPress(event) {
     } else {
         switch (event.key) {
             case 'ArrowUp':
-                direction = 'up';
+                if (!((snake.length - 1) >= 0 && direction === "down")) { //these if-statements are stating player cannot crash on snake's first body by moving opposite direction
+                    direction = 'up';
+                }
                 break;
             case 'ArrowDown':
-                direction = 'down';
+                if (!((snake.length - 1) >= 0 && direction === "up")) {
+                    direction = 'down';
+                }
                 break;
             case 'ArrowLeft':
-                direction = 'left';
+                if (!((snake.length - 1) >= 0 && direction === "right")) {
+                    direction = 'left';
+                }
                 break;
             case 'ArrowRight':
-                direction = 'right';
+                if (!((snake.length - 1) >= 0 && direction === "left")) {
+                    direction = 'right';
+                }
                 break;
         }
     }
