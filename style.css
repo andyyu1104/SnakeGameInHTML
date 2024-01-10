@@ -49,6 +49,26 @@ body,
     margin: 0;
 }
 
+.scoresTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+#scoreTitle {
+    color: black;
+}
+
+#highscoreTitle {
+    color: black;
+}
+
+#scoreTitle,
+#highscoreTitle {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
 .scores {
     display: flex;
     justify-content: space-between;
